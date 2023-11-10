@@ -5,15 +5,17 @@ import {useState} from "react";
 function App(){
   const [state, setState] = useState("");
   const request = async () => {
-    const api_request = await fetch(`http://127.0.0.1:8000/api/demo/`);
-    console.log(`${encodeURIComponent('http://127.0.0.1:8000/api/demo/')}`);
+    const api_request = await fetch(`/api/demo/`);
+    console.log(`${encodeURIComponent('/api/demo/')}`);
     const response = await api_request.text();
     console.log(response);
     setState(response);
     console.log(state);
     return state;
   }
+
   const a = request() || "пусто" ;
+
   return (
     <div className="App">
       <header className="App-header">
