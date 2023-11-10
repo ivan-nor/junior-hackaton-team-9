@@ -1,6 +1,6 @@
 install:
 	pip install -r requirements.txt
-	cd frontend && npm install
+	cd frontend && npm install && npm ci
 
 
 start-backend:
