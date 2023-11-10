@@ -11,4 +11,4 @@ start-frontend:
 	cd frontend && npm run start
 
 start:
-	make start-backend & make start-frontend
+	make start-backend & npx serve -s ./frontend/build
